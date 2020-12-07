@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Skyhigh: Simulation</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+        <div class="container">
+            <h1>Privilege Simulation</h1>
+            <h3>During class, you have completely filled your notebook and need to buy a new one. There is a school trip coming up, however
+            that you would really like to attend. You only have enough money for one of these. Which will you pick?</h3>
+            <button type="button" class="choice btn btn-info btn-lg" id="choice" data-id="You purchase a notebook so that you are able to
+            continue in your studies. You are unable to participate in the class trip and are disappointed when your friends
+            talk about how great it was.<br><br>Many children miss out on trips due to income. A lot of schools offer financial aid to those
+            who request, however the United Kingdom’s Children’s Commission on Poverty found that 55% of students felt embarrassed about
+            their income, and would self-exclude themselves from activities instead of asking for help.">Notebook</button>
+            <button type="button" class="choice btn btn-info btn-lg" id="choice2" data-id="You decide to go on a trip with your class.
+            You spend the next few days scribbling notes in margins of already used pages and sneaking paper from the recycling bin to use the
+            back of. Your notes are less organized than you would like and you feel your marks begin to suffer because of it.<br><br>
+            According to the National Center for Children in Povery, one in five children who live below the poverty line struggle
+            to purchase basic school supplies. For most families, having pencils and paper is a given, but it is a real struggle for others."
+            >Trip</button>
+
+            <div class="modal fade" id="choose" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                <div class="modal-body">
+                    <p id="text">sdfgs</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" onclick="window.location.href='game4.html'">Next</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </body>
+
+    <script>
+        $(document).ready(function(){
+          $("#choice").click(function(){
+                var t = $(this).data('id');
+                document.getElementById("text").innerHTML = t;
+                $('#choose').modal('show');
+            });
+        });
+
+        $(document).ready(function(){
+          $("#choice2").click(function(){
+                var t = $(this).data('id');
+                document.getElementById("text").innerHTML = t;
+                $('#choose').modal('show');
+            });
+        });
+    </script>
+</html>

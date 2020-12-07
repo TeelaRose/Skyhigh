@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       <title>Skyhigh: Simulation</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+        <div class="container">
+            <h1>Privilege Simulation</h1>
+            <h3>Money is running very tight in your family. Already, you are finding it difficult to manage your responsabilities, but you know
+            as money tightens, it will only get harder. Will you find a part time job to help your family financially, or stay as you are?</h3>
+            <button type="button" class="choice btn btn-info btn-lg" id="choice" data-id="You have decided to find a part time job. Despite being
+            very busy and struggling in your studies already, you would like to help out your family. Your marks drop even further with less and
+            less time to dedicate to your studies. <br><br>
+            Dropping marks is a recurrent theme throughout the lives of underprivileged students. According to the National Center for Education Stats,
+            27% of highschool dropouts left school because they were failing too many classes. With marks lowering, dropping out can become a serious
+            risk for underprivileged students. Another high contributing factor is leaving school to become caregivers, which accounted for about
+            26%. This again is dangerous, because if students themselves don't get a job, but their parents start working more hours leaving older
+            siblings to care for the younger, they may drop out of school.
+            ">Do homework</button>
+            <button type="button" class="choice btn btn-info btn-lg" id="choice2" data-id="You decide not to find work. Balancing school and home life
+            is already hard enough, adding a job on top of that would be near impossible. The problems you face gradually increase as your income
+            lowers, making life harder on the whole family.<br><br>
+            Nearly 20% of high school students in low income families not on welfare worked over 20 hours a week, according to the Urban Institute
+            National Survey of American Families. Not only would accepting a job take
+            some time away, but to gain enough money to make a large difference, these students work very long hours. If grades already were dropping,
+            this would cause a drastic decrease on top of that."
+            >Sleep</button>
+
+            <div class="modal fade" id="choose" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                <div class="modal-body">
+                    <p id="text">sdfgs</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" onclick="window.location.href='finish.html'">Next</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </body>
+
+    <script>
+        $(document).ready(function(){
+          $("#choice").click(function(){
+                var t = $(this).data('id');
+                document.getElementById("text").innerHTML = t;
+                $('#choose').modal('show');
+            });
+        });
+
+        $(document).ready(function(){
+          $("#choice2").click(function(){
+                var t = $(this).data('id');
+                document.getElementById("text").innerHTML = t;
+                $('#choose').modal('show');
+            });
+        });
+    </script>
+</html>

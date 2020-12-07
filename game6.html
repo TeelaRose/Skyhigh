@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Skyhigh: Simulation</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Privilege Simulation</h1>
+            <h3>At home, you have a big project due the next day but your family is extremely loud, and there’s not much space, resulting in a
+            distracting working environment. You can either go to the library, or stay at home.</h3>
+            <button type="button" class="choice btn btn-info btn-lg" id="choice" data-id="You decide to go to the library to work. Due to
+            circumstances, it is unlikely that you will be able to get a ride, so must walk or ride a bike. <br><br>If you are lucky, the library is nearby,
+            however it could take a very long time to get there. If a library is within about 3 kilometers you could make it in half an hour. With
+            needing to go there and back, plus there and back again for dinner, this can take 2 hours out of your day.
+            ">Go to the library</button>
+            <button type="button" class="choice btn btn-info btn-lg" id="choice2" data-id="Despite all the distractions, you decide it will be
+            easier to stay at home. This makes it more difficult to focus, leading to frustration, and your work taking longer than it should to
+            complete, and results in lower quality work.<br><br>
+            This again results in lower acedmic standards from low income families. Students face many difficulties in these circumstaces, making
+            it very difficult to perfrom well in school and pursue higher education. This is the 'poverty cycle' as due to low income, these students
+            will not be able to get a good education and good job, and will end up having low income later in life. This is a cycle since the deeper
+            in poverty you are, the deeper you will sink in it."
+            >Stay at home</button>
+
+            <div class="modal fade" id="choose" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                <div class="modal-body">
+                    <p id="text">sdfgs</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" onclick="window.location.href='game7.html'">Next</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </body>
+
+    <script>
+        $(document).ready(function(){
+          $("#choice").click(function(){
+                var t = $(this).data('id');
+                document.getElementById("text").innerHTML = t;
+                $('#choose').modal('show');
+            });
+        });
+
+        $(document).ready(function(){
+          $("#choice2").click(function(){
+                var t = $(this).data('id');
+                document.getElementById("text").innerHTML = t;
+                $('#choose').modal('show');
+            });
+        });
+    </script>
+</html>

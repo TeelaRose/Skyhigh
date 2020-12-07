@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Skyhigh: Simulation</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Privilage Simulation</h1>
+            <h3>You wake up one morning and remember you have an assignment due first period. You have no printer at home,
+            and would need to print it off at school before class. Looking at the time, you realize you have time to either go
+            to school and print off the assignment, or eat breakfast. What will you do? </h3>
+            <button type="button" class="choice btn btn-info btn-lg" id="choice" data-id="You decide to eat breakfast. You feel full
+            and ready for the day, but you unfortunately recieve a zero on the assignment, despite having it completed.<br><br>
+            Technology access is a large barrier for many students. According to a study done by the University of Southern California,
+            only about 85% of students between kindegarten and grade 12 have access to internet. The student in this story was
+            more fortunate as they were only lacking a printer, and could have printed at school. Many students struggle in their
+            studies because working at home is a large barrier due to lack of technology.">Eat breakfast</button>
+            <button type="button" class="choice btn btn-info btn-lg" id="choice2" data-id="You print off the assignment and hand it
+            in on time. Unfortunately, since you did not eat, you are not able to focus properly and perform poorly on a test you had.
+            <br><br>The No Kid Hungry campaign estimates there are about 3 million kids who go to school without breakfast.
+            In fact, the character in this story is more fortunate than others,
+            as they were given the option of food whereas many students are not.">Print the assignment</button>
+
+            <div class="modal fade" id="choose" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                <div class="modal-body">
+                    <p id="text">sdfgs</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" onclick="window.location.href='game2.html'">Next</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </body>
+
+    <script>
+        $(document).ready(function(){
+          $("#choice").click(function(){
+                var t = $(this).data('id');
+                document.getElementById("text").innerHTML = t;
+                $('#choose').modal('show');
+            });
+        });
+
+        $(document).ready(function(){
+          $("#choice2").click(function(){
+                var t = $(this).data('id');
+                document.getElementById("text").innerHTML = t;
+                $('#choose').modal('show');
+            });
+        });
+    </script>
+</html>

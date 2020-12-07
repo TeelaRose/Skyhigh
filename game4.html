@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Skyhigh: Simulation</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+        <div class="container">
+            <h1>Privilege Simulation</h1>
+            <h3>The bell rings for lunch. You have no money to buy food and did not have food at home to bring, so you plan on not eating.
+            You hear your friends talking about buying food from the cafeteria, and they invite you to come. Will you tell them you have no money
+            for food and sit with them, or lie about needing to study to avoid telling them?</h3>
+            <button type="button" class="choice btn btn-info btn-lg" id="choice" data-id="You decide to tell your friends about the lack of money.
+            <br><br>Low income students are often too embarrassed about their financial state to tell others. The United Kingdom’s Children’s Commission
+            on Poverty found that 55% of students from low income families were too embarrassed to tell others and would avoid activities that related
+            to money.">Stay with friends</button>
+            <button type="button" class="choice btn btn-info btn-lg" id="choice2" data-id="You decide to spend lunch alone. Your friendships become
+            weaker and weaker as you often opt out of activities because you do not want to share your financial state with others.<br><br>
+            A research study done by Simon Hjalmarsson and Carina Mood reveals that underprivileged students have fewer friends because of lack of
+            participation, shame, stigmatism, and status mechanisms. Simple activities like making friends is made significantly harder for
+            underprivileged students."
+            >Spend lunch alone</button>
+
+            <div class="modal fade" id="choose" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                <div class="modal-body">
+                    <p id="text">sdfgs</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" onclick="window.location.href='game5.html'">Next</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </body>
+
+    <script>
+        $(document).ready(function(){
+          $("#choice").click(function(){
+                var t = $(this).data('id');
+                document.getElementById("text").innerHTML = t;
+                $('#choose').modal('show');
+            });
+        });
+
+        $(document).ready(function(){
+          $("#choice2").click(function(){
+                var t = $(this).data('id');
+                document.getElementById("text").innerHTML = t;
+                $('#choose').modal('show');
+            });
+        });
+    </script>
+</html>

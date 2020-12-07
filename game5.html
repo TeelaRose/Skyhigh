@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Skyhigh: Simulation</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Privilege Simulation</h1>
+            <h3>The school day is now over. An extra-curricular you were very excited for is to take place, but you should go home to watch your
+            younger siblings since your parents are at work. Will you stay at school for your extracurricular knowing your siblings will be alone
+            and without dinner, or walk your siblings home and watch them?</h3>
+            <button type="button" class="choice btn btn-info btn-lg" id="choice" data-id="You decide to stay at school for your extracurricular.
+            You find it difficult to enjoy your time however, since you spend the entire time wondering if your siblings made it home on time and
+            feel guilty that they have not been fed.
+            <br><br>Students from low income and underprivileged families are often excluded from activities because of home responsabilities, which
+            can impact many other aspects of their lives such as their social life, mental health, acedemic achievements, and much more.
+            ">Stay at school</button>
+            <button type="button" class="choice btn btn-info btn-lg" id="choice2" data-id="You decide to go home to take care of your siblings. You
+            miss out on the extra-curricular, but know they are safe and fed.<br><br>
+            A correlation between those who need to take care of their siblings and low acedmic asperations in a study done by Hisp J Behav. This is
+            because the students had less time to spend studying, and showed up late for class often because they needed to take their younger
+            siblings to class before attending their own, leading to lower acedmic achievement."
+            >Go home</button>
+
+            <div class="modal fade" id="choose" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                <div class="modal-body">
+                    <p id="text">sdfgs</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" onclick="window.location.href='game6.html'">Next</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </body>
+
+    <script>
+        $(document).ready(function(){
+          $("#choice").click(function(){
+                var t = $(this).data('id');
+                document.getElementById("text").innerHTML = t;
+                $('#choose').modal('show');
+            });
+        });
+
+        $(document).ready(function(){
+          $("#choice2").click(function(){
+                var t = $(this).data('id');
+                document.getElementById("text").innerHTML = t;
+                $('#choose').modal('show');
+            });
+        });
+    </script>
+</html>

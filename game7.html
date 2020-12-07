@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Skyhigh: Simulation</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Privilege Simulation</h1>
+            <h3>Your parents have been away all night, leaving you to take care of your siblings. After a long night of making dinner, helping with
+            homework, and putting them to bed, finally you are done and have time to yourself. By this time however, it is already very late. Should
+            you work on homework or go to bed?</h3>
+            <button type="button" class="choice btn btn-info btn-lg" id="choice" data-id="You decide to do your homework. With being busy every night
+            you know how easy it is to fall behind, and know taking one night off will lead to trouble down the road. You then get less sleep
+            than you should and your focus at school suffers.<br><br> The National Health Society released a list of dangers that come from lack of
+            sleep. While in the short term acedemic performace can be hindered by lack of focus, a reduced ability to retain information, and
+            drowsyness, there are long term effects as well from prolonged sleep deprivation. This includes increased risks for heart disease,
+            diabetes, obesity, mental health conditions, and more.
+            ">Do homework</button>
+            <button type="button" class="choice btn btn-info btn-lg" id="choice2" data-id="You decide it is better to go to sleep. After all, how
+            are you supposed to focus the next day if you have not slept enough? Your assignment is left incomplete and your marks suffer
+            because of it.<br><br>
+            Statistically, students from low income and underprivileged families get less
+            sleep. Not only are the hours reduced, but the quality as well. A study by the American Academy of Neurology reveals that those in low
+            income families are 25% more likely to have sleep disorders, leading to even more issues revolving around sleep."
+            >Sleep</button>
+
+            <div class="modal fade" id="choose" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                <div class="modal-body">
+                    <p id="text">sdfgs</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" onclick="window.location.href='game8.html'">Next</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </body>
+
+    <script>
+        $(document).ready(function(){
+          $("#choice").click(function(){
+                var t = $(this).data('id');
+                document.getElementById("text").innerHTML = t;
+                $('#choose').modal('show');
+            });
+        });
+
+        $(document).ready(function(){
+          $("#choice2").click(function(){
+                var t = $(this).data('id');
+                document.getElementById("text").innerHTML = t;
+                $('#choose').modal('show');
+            });
+        });
+    </script>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       <title>Skyhigh: Simulation</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+        <div class="container">
+            <h1>Privilege Simulation</h1>
+
+            <h3>You now must travel to school. You have the option of 2 routes: a shorter route that you know you will make it on time
+            to school by following but a group of other students who often bully you frequent this path, or a longer path that is safe,
+            but you may not make it on time to school by following. Which will you pick?</h3>
+            <button type="button" class="choice btn btn-info btn-lg" id="choice" data-id="You decide to pick the shorter path.
+            Unfortunately, you run into this malicious group of students. <br><br>According to the UNESCO Institute for Statistics,
+            two in five children from low income families experience bullying. In addition, the National Children’s Bureau found
+            only 58% of students in poverty talked to parents about important issues, compared to 67% of other students. This
+            means they are not only bullied more, but have less people to reach out to for help.">Short path</button>
+            <button type="button" class="choice btn btn-info btn-lg" id="choice2" data-id="You decide to take the longer path to
+            avoid being bullied, however you do not make it to school on time and as a result, miss some of the information taught in class.
+            This leads to an overall lower mark, as you repeadetly miss part of class from taking a long route. <br><br>
+            The National Assessment of Educational Progress did a study in 2015 which shows most students who missed 3 days in a month of school were
+            were diagnosed with a disability, students who were eligible for free lunch, Hispanic English language learners,
+            and Native American students, all of which are underprivileged groups.">Long path</button>
+
+            <div class="modal fade" id="choose" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                <div class="modal-body">
+                    <p id="text">sdfgs</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" onclick="window.location.href='game3.html'">Next</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </body>
+
+    <script>
+        $(document).ready(function(){
+          $("#choice").click(function(){
+                var t = $(this).data('id');
+                document.getElementById("text").innerHTML = t;
+                $('#choose').modal('show');
+            });
+        });
+
+        $(document).ready(function(){
+          $("#choice2").click(function(){
+                var t = $(this).data('id');
+                document.getElementById("text").innerHTML = t;
+                $('#choose').modal('show');
+            });
+        });
+    </script>
+</html>
